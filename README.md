@@ -7,15 +7,15 @@ Built using **Tkinter**, with modular code design for easy extension and customi
 
 ## ✨ Features
 
-- 🎞️ Real-time visual sorting animations
-- 🎛️ Adjustable array size and speed control
-- 🔘 Algorithm selection dropdown
-- ⏸️ Pause / ▶️ Resume controls
-- 🪜 Step-by-step mode with **Next Step** control
-- 🌗 Dark / Light mode toggle
-- 💬 Algorithm descriptions
-- 📈 Time and space complexity viewer
-- 📁 Fully modular file structure
+- Real-time visual sorting animations
+- Adjustable array size and speed control
+- Algorithm selection dropdown
+- Pause / Resume controls
+- Step-by-step mode with **Next Step** control
+- Dark / Light mode toggle
+- Algorithm descriptions
+- Time and space complexity viewer
+- Fully modular file structure
 
 ---
 
@@ -94,7 +94,7 @@ from algorithms.your_sort import your_sort
 algorithm_map["Your Sort"] = your_sort
 ```
 
-✅ Done — it appears in the dropdown!
+Done — it appears in the dropdown.
 
 ---
 

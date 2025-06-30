@@ -1,45 +1,49 @@
-# README.md content + template layout
+# 🧮 Sorting Algorithm Visualizer
 
-# Sorting Algorithm Visualizer
-
-A modular, Tkinter-based animated visualization tool for classic sorting algorithms. Built with clean file structure and extendability in mind.
-
----
-
-## 📊 Features
-
-- Visualize sorting steps in real time
-- Adjustable array size and speed control
-- Dropdown to choose algorithm
-- Clean modular structure for easy addition of algorithms
-- Color-coded animation for comparisons and swaps
+A clean, animated and interactive **Python GUI tool** to visualize classic sorting algorithms step-by-step.  
+Built using **Tkinter**, with modular code design for easy extension and customization.
 
 ---
 
-## 📦 Project Structure
+## ✨ Features
 
-```plaintext
+- 🎞️ Real-time visual sorting animations
+- 🎛️ Adjustable array size and speed control
+- 🔘 Algorithm selection dropdown
+- ⏸️ Pause / ▶️ Resume controls
+- 🪜 Step-by-step mode with **Next Step** control
+- 🌗 Dark / Light mode toggle
+- 💬 Algorithm descriptions
+- 📈 Time and space complexity viewer
+- 📁 Fully modular file structure
+
+---
+
+## 📁 Folder Structure
+
+```
 SortingVisualizer/
-├── main.py                    # GUI controller
+├── main.py                    # GUI launcher
 ├── core/
-│   ├── draw.py              # Handles all drawing to canvas
-│   └── sorter.py            # Central algorithm mapping
+│   ├── controls.py           # All control UI logic
+│   ├── draw.py               # Canvas drawing logic
+│   ├── sorter.py             # Maps algorithms to names
+│   ├── descriptions.py       # Algorithm descriptions
+│   └── complexity_info.py    # Time & space complexities
 ├── algorithms/
 │   ├── bubble_sort.py
 │   ├── insertion_sort.py
 │   ├── selection_sort.py
 │   ├── merge_sort.py
 │   ├── quick_sort.py
-│   └── heap_sort.py
-```
-
----
-
-## ⚡ How to Run
-
-```bash
-# Clone repo and run:
-python main.py
+│   ├── heap_sort.py
+│   ├── counting_sort.py
+│   ├── radix_sort.py
+│   ├── shell_sort.py
+│   ├── comb_sort.py
+│   ├── tree_sort.py
+│   ├── bucket_sort.py
+│   └── tim_sort.py
 ```
 
 ---
@@ -52,43 +56,63 @@ python main.py
 - Merge Sort
 - Quick Sort
 - Heap Sort
+- Counting Sort
+- Radix Sort
+- Shell Sort
+- Comb Sort
+- Tree Sort
+- Bucket Sort
+- Tim Sort
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to Run
 
-To add a new algorithm:
-1. Create `algorithms/your_sort.py`
-2. Implement a generator `def your_sort(arr):`
-3. Register it in `core/sorter.py`:
+Make sure Python is installed.  
+Then from terminal:
+
+```bash
+cd path/to/SortingVisualizer
+python main.py
+```
+
+This will launch the GUI.
+
+---
+
+## ➕ How to Add New Sorting Algorithms
+
+1. Create a new file in the `algorithms/` folder like `your_sort.py`
+2. Inside it, implement a generator function:
+```python
+def your_sort(arr):
+    # yield arr, highlights
+```
+3. Import and register it in `core/sorter.py`:
 ```python
 from algorithms.your_sort import your_sort
 algorithm_map["Your Sort"] = your_sort
 ```
 
-That's it!
+✅ Done — it appears in the dropdown!
 
 ---
 
-## 🌈 Roadmap
+## 📌 Roadmap / Ideas
 
 - [x] Modular sort files
 - [x] Canvas animation
-- [x] Dropdown menu UI
-- [ ] Pause/Resume
-- [ ] Step-by-step mode
-- [ ] Side-by-side comparison
-- [ ] Sound effects
-- [ ] Export frames as GIF
+- [x] Pause & Resume
+- [x] Step-by-step mode
+- [x] Dark/Light mode toggle
+- [x] Algorithm descriptions
+- [x] Time & space complexity viewer
 
 ---
 
-## 💪 Contributing
+## 📄 License
 
-Pull requests welcome. Please keep code modular and clean.
+[MIT](https://opensource.org/licenses/MIT)
 
 ---
 
-## 🚀 License
-
-MIT
